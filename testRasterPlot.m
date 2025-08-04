@@ -1,7 +1,7 @@
 % Generating raster plot visualization of calcium imaging data for Sora
 
 %% load data
-dataFile = 'RE_test 1';   % data fiile
+dataFile = 'Sample Data';   % data fiile
 dataPath = 'data';                                                  % data path
 [~, sheets] = xlsfinfo(fullfile(dataPath, [dataFile, '.xlsx']));    % get sheet info
 nSheet = length(sheets);                                            % number of sheets
@@ -135,3 +135,4 @@ for i = 1 : length(sheets)
     xlswrite(fullfile(dataPath, [outputFile, '.xlsx']), nEvt{i}', sheets{i}, 'B2');
     disp(['Sheet [', sheets{i}, '] saved.']);
 end
+
